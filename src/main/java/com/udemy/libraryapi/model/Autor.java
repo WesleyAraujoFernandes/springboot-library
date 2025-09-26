@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.UUID;
 
 import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import jakarta.persistence.Column;
@@ -40,6 +41,7 @@ public class Autor {
     @CreatedDate
     @Column(name = "data_cadastro", nullable = false, updatable = false)
     private LocalDate dataCadastro;
+    @LastModifiedDate
     @Column(name = "data_atualizacao", nullable = false)
     private LocalDate dataAtualizacao;
     @Column(name = "id_usuario")
